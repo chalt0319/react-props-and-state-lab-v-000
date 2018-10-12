@@ -35,9 +35,6 @@ class App extends React.Component {
   }
 
   onAdopt = (id) => {
-    debugger
-    let petsArray = this.state.adoptedPets
-
     this.setState({
       adoptedPets: [...this.state.adoptedPets, id]
     })
