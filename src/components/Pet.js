@@ -3,7 +3,7 @@ import React from 'react'
 class Pet extends React.Component {
 
   gender = () => {
-    if (this.props.gender === "male") {
+    if (this.props.pet.gender === "male") {
       return "♂"
     } else {
       return "♀"
@@ -19,25 +19,25 @@ class Pet extends React.Component {
   }
 
   gotAdopted = () => {
-    this.props.onAdoptPet(this.props.id)
+    this.props.onAdoptPet(this.props.pet.id)
   }
 
   render() {
     return (
-      <div className="card" id={this.props.id}>
+      <div className="card" id={this.props.pet.id}>
         <div className="content">
         <p></p>
           <a className="header">
             {this.gender()}
-            <strong>{this.props.name}</strong>
+            <strong>{this.props.pet.name}</strong>
           </a>
           <div className="meta">
             <p></p>
-            <span className="date">Type: {this.props.type}</span>
+            <span className="date">Type: {this.props.pet.type}</span>
           </div>
           <div className="description">
-            <p>Age: {this.props.age}</p>
-            <p>Weight: {this.props.weight}</p>
+            <p>Age: {this.props.pet.age}</p>
+            <p>Weight: {this.props.pet.weight}</p>
           </div>
         </div>
         <div className="extra content">
